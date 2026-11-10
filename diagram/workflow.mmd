@@ -1,0 +1,55 @@
+flowchart TD
+  subgraph S1["1 · SALES"]
+    A(["Client reaches out<br/>Referral · LinkedIn · Website"]) --> B["First response + book discovery call<br/>Owner ❓ · Channel ❓ · Speed ❓"]:::unknown
+    B --> C{"Log lead<br/>in HubSpot?"}
+    C -- Yes --> C1["Lead logged<br/><i>HubSpot</i>"]
+    C -- "Sometimes skipped<br/>(fast referrals)" --> D
+    C1 --> D["Discovery call<br/>Michael or a consultant"]
+    D --> E{"Looks like<br/>a fit?"}
+    E -- No --> E1["Not a fit<br/>Handling ❓"]:::unknown
+    E -- Yes --> F["Prepare proposal<br/>Michael (usually) or senior consultant<br/>Format mostly the same, approach varies"]
+    F --> G["Send proposal, wait for approval"]
+    G --> H{"Client<br/>response?"}
+    H -- Revisions --> F
+    H -- Declines --> H1["Handling ❓"]:::unknown
+    H -- Accepts --> I["Client signs agreement<br/>Tool ❓"]
+  end
+
+  subgraph S2["2 · KICKOFF & SETUP"]
+    I --> J["Handoff to PM<br/>How ❓"]:::unknown
+    J --> K["Schedule kickoff meeting"]
+    K -- "order ❓" --> L["PM creates Asana project<br/>+ shared folders<br/><i>Asana · Drive</i>"]
+  end
+
+  subgraph S3["3 · DELIVERY"]
+    L --> M{"High-priority<br/>client?"}
+    M -- No --> M1["PM assigns tasks<br/>by availability + expertise<br/><i>Capacity spreadsheet</i>"]
+    M -- Yes --> M2["Michael assigns directly"]
+    M1 --> N["Consultants deliver work"]
+    M2 --> N
+    N --> O["Weekly task updates<br/><i>Asana</i>"]
+    N --> P{"Client update<br/>format?"}
+    P --> P1["Weekly status meeting"]
+    P --> P2["Written report"]
+    P --> P3["Quick call"]
+    X1["Updates in Slack / email"]:::exception
+  end
+
+  subgraph S4["4 · BILLING & COMPLETION"]
+    N --> Q{"Fixed fee<br/>or hourly?"}
+    Q -- "Fixed fee" --> Q1["Monthly invoice<br/>Sender ❓"]
+    Q -- Hourly --> Q2["Consultants submit time entries<br/>Tool ❓"]
+    Q2 --> Q3["Accounting generates invoice"]
+    Q1 --> R["Payment collection ❓"]:::unknown
+    Q3 --> R
+    R --> Z(["Project completion<br/>Definition ❓"]):::unknown
+  end
+
+  I -. "EXCEPTION: work starts<br/>before setup is complete" .-> N
+  N -. "EXCEPTION: updates via<br/>Slack / email instead" .-> X1
+  Q2 -. "EXCEPTION: late entries<br/>delay billing" .-> Q3
+
+  classDef unknown fill:#fff4e5,stroke:#e08a00,stroke-width:2px,stroke-dasharray:5 3,color:#5a3a00
+  classDef exception fill:#fdecec,stroke:#c62828,stroke-width:2px,color:#7a1010
+  classDef phase fill:#f5f7fb,stroke:#9aa5b8,color:#1f2937
+  class S1,S2,S3,S4 phase
