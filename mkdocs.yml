@@ -1,0 +1,30 @@
+site_name: "Process Discovery Case Study"
+site_description: From one incomplete discovery call to a documented process, gaps, questions and an automation plan.
+site_author: Daksh Vanshaj
+site_url: https://dakshvanshaj.github.io/process-discovery-case-study/
+repo_url: https://github.com/dakshvanshaj/process-discovery-case-study
+theme:
+  name: material
+  features: [navigation.sections, navigation.footer, content.code.copy]
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: {icon: material/brightness-7, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: {icon: material/brightness-4, name: Light mode}
+nav:
+  - Overview: README.md
+  - The case: case/scenario.md
+  - 1. Discovery analysis: deliverables/01-discovery-analysis.md
+  - 2. Process documentation: deliverables/02-process-documentation.md
+  - 3. Improvement and AI: deliverables/03-improvement-and-ai.md
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

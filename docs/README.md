@@ -4,6 +4,15 @@ From one incomplete discovery call to a documented current-state process, a list
 
 > **Fictional practice case.** The firm and the stakeholder are made up, and this isn't client work. [Read the scenario and full transcript →](case/scenario.md)
 
+## Video walkthrough (9 min)
+
+<video controls preload="metadata" poster="assets/walkthrough-poster.jpg" style="width:100%;border-radius:6px">
+  <source src="assets/walkthrough.mp4" type="video/mp4">
+  <a href="assets/walkthrough.mp4">Download the walkthrough video</a>
+</video>
+
+I walk through the process, the main gaps, the questions for the next session and the recommendations.
+
 ![Current-state workflow, lead intake to billing](diagram/workflow.png)
 
 ## Executive summary
@@ -21,7 +30,7 @@ From one incomplete discovery call to a documented current-state process, a list
 | 1 | [Discovery analysis](deliverables/01-discovery-analysis.md) | 13-stage process summary, inputs and outputs, 9 decision points, 20 information gaps, ownership map, 31 follow-up questions |
 | 2 | [Process documentation](deliverables/02-process-documentation.md) | Workflow diagram, step-by-step process with owners and systems, decision table, 8 known exceptions (intended vs. actual) |
 | 3 | [Improvement and AI](deliverables/03-improvement-and-ai.md) | 10 operational challenges, 8 prioritized recommendations, 7 automation and AI opportunities with a rollout order |
-| 🗺️ | [diagram/](diagram/) | Workflow as a PNG and as [Mermaid source](diagram/workflow.mmd) |
+| 🗺️ | [Workflow diagram](diagram/workflow.png) | Workflow as a PNG and as [Mermaid source](diagram/workflow.mmd) |
 
 ## Approach
 
